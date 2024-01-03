@@ -1,0 +1,21 @@
+.article {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+	background-color: #121124;
+	border-radius: 8px;
+}
+
+h1 {
+	color: #00ccff;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+.meta {
+	font-style: italic;
+	color: #777;
+}

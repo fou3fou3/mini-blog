@@ -1,0 +1,28 @@
+<!-- home.html -->
+{% extends 'base.html' %}
+
+{% block stylesheet %} 
+	<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+{% endblock %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+	<div class="bio-box">
+		<h2>Who am i: Fouad</h2>
+		<p>Description: 
+			Hello there im fouad, Im a python programer who have been programming for 4 years now, Im interested in backend, databases, operating systems, and blockchain, This is my blog!
+		</p>
+	</div>
+	
+	<div class="posts">
+		{% for post in posts %}
+			<div class="post"> 
+					<h2 class="title"> {{ post['title'] }} </h2>
+					<h3 class="date"> posted : {{ post['date'] }}</h3>
+					{{ post['article'][:200] }}... <a href="/article/{{ post['u_id'] }}" class="read-more-link"> Read more</a>
+			</div>
+			
+		{% endfor %}
+		
+{% endblock %}

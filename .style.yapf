@@ -1,0 +1,4 @@
+[style]
+based_on_style = pep8
+use_tabs = true
+indent_width = 4  # Optional: If you want to set a specific width for tabs

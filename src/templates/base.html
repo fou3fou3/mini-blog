@@ -1,0 +1,38 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+		{% block stylesheet %}  {% endblock %}
+    <title>{% block title %} title {% endblock %}</title>
+</head>
+<body>
+	<div class="nav">
+		<input type="checkbox" id="nav-check">
+		<div class="nav-header">
+			<div class="nav-title"><a href="/" class="name">Fouad's Blog</a></div>
+		</div>
+		<div class="nav-btn">
+			<label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+		</div>
+		
+		<div class="nav-links">
+			<a href="https://github.com/fou3fou3" target="_blank">Github</a>
+		</div>
+	</div>
+	
+	<div class="content">
+		{% block content %}
+	
+		{% endblock %}
+	</div>
+
+
+</body>
+</html>

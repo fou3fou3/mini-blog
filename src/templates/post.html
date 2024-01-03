@@ -1,0 +1,54 @@
+<!-- post.html -->
+{% extends 'base.html' %}
+
+{% block stylesheet %} 
+	<link rel="stylesheet" href="{{ url_for('static', filename='post.css') }}">
+{% endblock %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block content %}
+
+	<div class="container">
+		<form action="/post" method="post">
+		<div class="row">
+			<div class="col-25">
+				<label for="title">Title: </label>
+			</div>
+			<div class="col-75">
+				<input type="text" id="title" name="title" placeholder="your title" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="jwt">JWT AUTH: </label>
+			</div>
+			<div class="col-75">
+				<input type="password" id="jwt" name="jwt" placeholder="your jwt" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="article">Article :</label>
+			</div>
+			<div class="col-75">
+				<textarea id="article" name="article" placeholder="What are you thinking about" style="height:150px" required></textarea>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<input type="submit" value="Submit">
+		</div>
+		</form>
+	</div>
+
+
+	{% if method == 'POST' and success == True%}
+    <h4>Posted the article. Check it at <a href="/article/{{ u_id }}" style="text-decoration: underline;">here</a></h4>
+  {% endif %}
+
+	{% if method == 'POST' and success == False%}
+    <h4>Your JWT is not correct</h4>
+  {% endif %}
+
+{% endblock %}
