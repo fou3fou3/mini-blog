@@ -5,7 +5,7 @@ miniblog = Flask(__name__)
 
 
 miniblog.add_url_rule('/', view_func=home.home)
-miniblog.add_url_rule('/post', view_func=post.post, methods=['GET', 'POST'])
+miniblog.add_url_rule('/post', view_func=post.post, methods=['GET', 'POST']) # type: ignore
 miniblog.add_url_rule('/article/<string:u_id>', view_func=article.article)
 
 
