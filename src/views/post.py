@@ -6,7 +6,6 @@ def post():
 		return render_template('post.html', title='post', method='GET')
 
 	elif request.method == 'POST':
-		print(request.form.get('jwt'))
 		if 'authenticated' == authenticate_jwt(request.form.get('jwt')):
 			title = request.form.get('title')
 			article = request.form.get('article')
