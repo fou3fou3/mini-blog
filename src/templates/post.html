@@ -42,12 +42,7 @@
 		</form>
 	</div>
 
-
-	{% if method == 'POST' and success == True%}
-    <h4>Posted the article. Check it at <a href="/article/{{ u_id }}" style="text-decoration: underline;">here</a></h4>
-  {% endif %}
-
-	{% if method == 'POST' and success == False%}
+	{% if method == 'POST'%}
     <h4>Your JWT is not correct</h4>
   {% endif %}
 

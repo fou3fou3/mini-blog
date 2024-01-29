@@ -1,4 +1,4 @@
-from flask import render_template, request
+from flask import render_template, request, redirect
 from mongo_utils import add_post, authenticate_jwt
 
 def post():
@@ -10,6 +10,5 @@ def post():
 			title = request.form.get('title')
 			article = request.form.get('article')
 			u_id = add_post(title, article)
-			return render_template('post.html', title='post', method='POST', success=True, u_id=u_id)
-		else:	return render_template('post.html', title='post', method='POST', success=False)
-		
+			return redirect(f'/article/{u_id}')
+		else:	return render_template('post.html', title='post', method='POST')
