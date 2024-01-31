@@ -1,8 +1,8 @@
 from flask import render_template
-from mongo_utils import get_post
+from mongo_utils import MongoDB
 
 def article(u_id:str):
-	post = get_post(u_id)
+	post = MongoDB.get_post(u_id)
 	if post:
 		return render_template('article.html', post=post)
 	else:

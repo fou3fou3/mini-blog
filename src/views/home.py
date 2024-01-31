@@ -1,5 +1,5 @@
 from flask import render_template
-from mongo_utils import get_posts
+from mongo_utils import MongoDB
 
 def home():
-	return render_template('home.html', title="Fouad's mini-blog", posts=get_posts())
+	return render_template('home.html', title="Fouad's mini-blog", posts=MongoDB.get_posts())

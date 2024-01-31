@@ -16,7 +16,7 @@ def redirect_to_root():
     return redirect(url_for('home'))
 
 @miniblog.errorhandler(404)
-def page_not_found(error):
+def page_not_found(_):
     return render_template('404.html'), 404
 
 if __name__ == "__main__":
