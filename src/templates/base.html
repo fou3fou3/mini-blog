@@ -5,27 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		{% block stylesheet %}  {% endblock %}
     <title>{% block title %} title {% endblock %}</title>
 </head>
 <body>
-	<div class="nav">
-		<input type="checkbox" id="nav-check">
-		<div class="nav-header">
-			<div class="nav-title"><a href="/" class="name">Fouad's Blog</a></div>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="/"><h5>Fouad's Blog</h5></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ms-auto">
+				<!-- Replace "About" with Facebook icon and link -->
+				<li class="nav-item">
+					<a class="nav-link fw-light" href="/about" style="padding-right: 35px"><h5>About</h5></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="facebook.com"><h5><i class="bi bi-facebook"></i></h5></a>
+				</li>
+				<!-- Replace "Services" with Instagram icon and link -->
+				<li class="nav-item">
+					<a class="nav-link" href="instagram.com"><h5><i class="bi bi-instagram"></i></h5></a>
+				</li>
+				<!-- Replace "Contact" with GitHub icon and link -->
+				<li class="nav-item">
+					<a class="nav-link" href="github.com"><h5><i class="bi bi-github"></i></h5></a>
+				</li>
+			</ul>
 		</div>
-		<div class="nav-btn">
-			<label for="nav-check">
-				<span>fouad</span>
-				<span>bleaoh</span>
-				<span></span>
-			</label>
-		</div>
-		
-		<div class="nav-links">
-			<a href="https://github.com/fou3fou3" target="_blank">Github</a>
-		</div>
-	</div>
+	</nav>
 	
 	<div class="content">
 		{% block content %}
@@ -33,6 +43,6 @@
 		{% endblock %}
 	</div>
 
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

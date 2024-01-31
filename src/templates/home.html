@@ -1,9 +1,11 @@
 <!-- home.html -->
 {% extends 'base.html' %} {% block stylesheet %}
-<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"> {% endblock %} {% block title %} {{ title }} {% endblock %} {% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"> {% endblock %} {% block title %} {{ title }} {% endblock %}
+
+{% block content %}
 <div class="bio-box">
-    <h2>Whoami?: Fouad</h2>
-    <p>Description: Hello there im fouad, Im a python programer who have been programming for 4 years now, Im interested in backend, databases, operating systems, and blockchain, This is my blog!
+    <h2>Fouad</h2>
+    <p>Hello there im fouad, Im a python programer who have been programming for 4 years now, Im interested in backend, databases, operating systems, and blockchain, This is my blog!
     </p>
 </div>
 

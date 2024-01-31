@@ -2,13 +2,14 @@
 	max-width: 800px;
 	margin: 20px auto;
 	padding: 20px;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-	background-color: #121124;
+	box-shadow: 0 0 10px rgba(202, 200, 200, 0.479);
+	background-color: rgb(54, 54, 54);
 	border-radius: 8px;
+	color: rgb(246, 241, 235);
 }
 
 h1 {
-	color: #00ccff;
+	color: rgb(240, 240, 240);
 }
 
 p {

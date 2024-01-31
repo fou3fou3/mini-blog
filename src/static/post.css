@@ -6,7 +6,7 @@
 input[type=password], input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #1d2044;
+  border: 1px solid #000000;
   border-radius: 4px;
   resize: vertical;
 }
@@ -17,7 +17,7 @@ label {
 }
 
 input[type=submit] {
-  background-color: #242647;
+  background-color: rgb(34, 33, 33);
   color: white;
   padding: 12px 20px;
   border: none;
@@ -27,13 +27,15 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #383b64;
+  background-color: rgb(28, 27, 27);
 }
 
 .container {
   border-radius: 5px;
-  background-color: rgb(44, 44, 71);
-  padding: 20px;
+  background-color: rgb(54, 54, 54);
+	margin-top: 20px;
+  padding: 35px;
+	color: rgb(246, 241, 235);
 }
 
 .col-25 {
