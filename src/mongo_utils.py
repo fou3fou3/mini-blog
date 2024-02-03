@@ -4,8 +4,7 @@ import arrow
 from pymongo import MongoClient
 
 dotenv.load_dotenv()
-connection_string = str('localhost', 22727)
-client = MongoClient(connection_string)
+client = MongoClient('localhost', )
 
 class MongoDB:
 	mini_blog = client.get_database("mini-blog")
