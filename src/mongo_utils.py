@@ -1,12 +1,10 @@
 import dotenv
-import os
 import uuid
 import arrow
-import jwt
 from pymongo import MongoClient
 
 dotenv.load_dotenv()
-connection_string = str(os.environ['MONGO-URI'])
+connection_string = str('localhost', 22727)
 client = MongoClient(connection_string)
 
 class MongoDB:
@@ -32,13 +30,3 @@ class MongoDB:
 		uid_query = {"u_id": u_id}
 		post = MongoDB.posts.find_one(uid_query)
 		return post
-
-def authenticate_jwt(jwt_encoded):
-	try:
-		jwt_decoded = jwt.decode(jwt_encoded, os.environ['JWT'], algorithms=['HS256'])
-		if 'permission' in jwt_decoded and jwt_decoded['permission'] == 'permitted':
-			return 'authenticated'
-		else:
-			return 'unauthenticated'
-	except jwt.exceptions.DecodeError:
-		return 'unauthenticated'

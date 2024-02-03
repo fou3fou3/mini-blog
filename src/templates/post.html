@@ -21,14 +21,6 @@
 		</div>
 		<div class="row">
 			<div class="col-25">
-				<label for="jwt">JWT AUTH: </label>
-			</div>
-			<div class="col-75">
-				<input type="password" id="jwt" name="jwt" placeholder="your jwt" required>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-25">
 				<label for="article">Article :</label>
 			</div>
 			<div class="col-75">
@@ -41,9 +33,5 @@
 		</div>
 		</form>
 	</div>
-
-	{% if method == 'POST'%}
-  	<center><h4 style="margin-top: 15px;">Your JWT is not correct</h4></center>
-  {% endif %}
 
 {% endblock %}
